@@ -1,4 +1,4 @@
-# sblrn25
+# sb_lrn_25
 NE: pring Boot code zone for '25
 
 Apr '25
