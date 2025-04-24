@@ -1,6 +1,9 @@
 package com.ne.sb.learn._5.sb_lrn.controllers;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.ne.sb.learn._5.sb_lrn.models.JsonToDo;
+import com.ne.sb.learn._5.sb_lrn.models.ProductsRecords;
+import com.ne.sb.learn._5.sb_lrn.models.ProductsRecords.Products;
 import com.ne.sb.learn._5.sb_lrn.services.FetchService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,4 +28,8 @@ public class DealOutsideController {
         return fetchService.outputFromFetchedData(url);
     }
 
+    @GetMapping("/get/products")
+    public List<Products> fetchAllProducts() throws JsonProcessingException {
+        return fetchService.getProducts();
+    }
 }
